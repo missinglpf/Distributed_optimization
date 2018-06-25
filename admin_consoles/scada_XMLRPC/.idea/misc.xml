@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 2.7.12 (/usr/local/Cellar/python/2.7.12_2/Frameworks/Python.framework/Versions/2.7/bin/python2.7)" project-jdk-type="Python SDK" />
+  <component name="SvnBranchConfigurationManager">
+    <option name="myConfigurationMap">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <SvnBranchConfiguration>
+              <option name="branchUrls">
+                <list>
+                  <option value="https://forge.g2elab.grenoble-inp.fr/usvn/public/svn/predis-temps-reel/branches" />
+                  <option value="https://forge.g2elab.grenoble-inp.fr/usvn/public/svn/predis-temps-reel/tags" />
+                </list>
+              </option>
+              <option name="trunkUrl" value="https://forge.g2elab.grenoble-inp.fr/usvn/public/svn/predis-temps-reel/trunk" />
+            </SvnBranchConfiguration>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+</project>

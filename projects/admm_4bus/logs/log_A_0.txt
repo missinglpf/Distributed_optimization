@@ -1,0 +1,120 @@
+2017-12-05 18:33:33,539 (MainThread) INFO: Reading the configuration file
+2017-12-05 18:33:33,578 (MainThread) INFO: Setting the initial values in OPAL-RT
+2017-12-05 18:33:33,578 (MainThread) INFO: Configuring the communication links
+2017-12-05 18:33:33,578 (MainThread) INFO: Initializing the ADMM buffers
+2017-12-05 18:33:33,579 (MainThread) INFO: Agent 0 initialized the ADMM buffers. First run. Populating first iteration with a cold start.
+2017-12-05 18:33:33,581 (MainThread) INFO: Opening communication channels to neighbours
+2017-12-05 18:33:33,648 (MainThread) INFO: Starting the data loging thread
+2017-12-05 18:33:33,648 (MainThread) INFO: Starting the opf thread
+2017-12-05 18:33:33,650 (opf-thread) DEBUG: Waiting for admm_start event
+2017-12-05 18:33:33,650 (MainThread) INFO: Starting the agent's RPC server
+2017-12-05 18:33:34,007 (MainThread) INFO: Agent 0 starting at:localhost:8000
+2017-12-05 18:33:34,042 (opf-thread) INFO: Agent 0========ADMM iteration 0 solved in 0.391 [s]
+2017-12-05 18:33:34,042 (opf-thread) DEBUG: Agent 0: Beta[1]=[  1.00000189e+00   0.00000000e+00   0.00000000e+00   1.96518274e-06
+   0.00000000e+00   0.00000000e+00]-> from Agent 0
+2017-12-05 18:33:34,042 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:34,069 (Thread-7 ) DEBUG: Agent 0: Beta[1]=[  1.00000189e+00   7.71756649e-01   0.00000000e+00   1.96518274e-06
+   7.83831418e-01   0.00000000e+00]-> from Agent 1
+2017-12-05 18:33:34,076 (Thread-8 ) DEBUG: Agent 0: Beta[1]=[  1.00000189e+00   7.71756649e-01   7.66878963e-01   1.96518274e-06
+   7.83831418e-01   7.88604200e-01]-> from Agent 2
+2017-12-05 18:33:34,076 (Thread-8 ) INFO: Agent 0: Received all beta info for iteration 1. Updating z.
+2017-12-05 18:33:34,575 (Thread-7 ) DEBUG: Agent 0: Z[1]=[ 0.          0.82281524  0.          0.          0.58052778  0.        ]
+2017-12-05 18:33:34,582 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:34,582 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:34,582 (opf-thread) DEBUG: Agent 0: Z[1]=[ 0.8462125   0.82281524  0.          0.52414586  0.58052778  0.        ]
+2017-12-05 18:33:34,589 (Thread-8 ) DEBUG: Agent 0: Z[1]=[ 0.8462125   0.82281524  0.81323373  0.52414586  0.58052778  0.47037035]
+2017-12-05 18:33:34,589 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 1. Updating nu.
+2017-12-05 18:33:34,608 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:34,707 (Thread-7 ) DEBUG: Agent 0: Beta[2]=[ 0.          0.8567571   0.          0.          0.49636993  0.        ]-> from Agent 1
+2017-12-05 18:33:34,799 (Thread-8 ) DEBUG: Agent 0: Beta[2]=[ 0.          0.8567571   0.84462357  0.          0.49636993  0.44671953]-> from Agent 2
+2017-12-05 18:33:35,762 (opf-thread) INFO: Agent 0========ADMM iteration 1 solved in 1.153 [s]
+2017-12-05 18:33:35,763 (opf-thread) DEBUG: Agent 0: Beta[2]=[ 1.15378947  0.8567571   0.84462357 -0.5241339   0.49636993  0.44671953]-> from Agent 0
+2017-12-05 18:33:35,763 (opf-thread) INFO: Agent 0: Received all beta info for iteration 2. Updating z.
+2017-12-05 18:33:35,763 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:35,767 (Thread-7 ) DEBUG: Agent 0: Z[2]=[ 0.          0.84735018  0.          0.          0.41449228  0.        ]
+2017-12-05 18:33:35,767 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:35,769 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:35,770 (opf-thread) DEBUG: Agent 0: Z[2]=[ 0.95172338  0.84735018  0.          0.13965185  0.41449228  0.        ]
+2017-12-05 18:33:35,773 (Thread-8 ) DEBUG: Agent 0: Z[2]=[ 0.95172338  0.84735018  0.86736035  0.13965185  0.41449228  0.16787286]
+2017-12-05 18:33:35,773 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 2. Updating nu.
+2017-12-05 18:33:35,776 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:35,946 (Thread-7 ) DEBUG: Agent 0: Beta[3]=[ 0.          0.95456225  0.          0.          0.13570376  0.        ]-> from Agent 1
+2017-12-05 18:33:35,980 (Thread-8 ) DEBUG: Agent 0: Beta[3]=[ 0.          0.95456225  0.94583225  0.          0.13570376  0.01040382]-> from Agent 2
+2017-12-05 18:33:37,081 (opf-thread) INFO: Agent 0========ADMM iteration 2 solved in 1.304 [s]
+2017-12-05 18:33:37,081 (opf-thread) DEBUG: Agent 0: Beta[3]=[ 1.20206642  0.95456225  0.94583225 -0.66377575  0.13570376  0.01040382]-> from Agent 0
+2017-12-05 18:33:37,082 (opf-thread) INFO: Agent 0: Received all beta info for iteration 3. Updating z.
+2017-12-05 18:33:37,082 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:37,085 (Thread-7 ) DEBUG: Agent 0: Z[3]=[ 0.          0.87630713  0.          0.          0.28950164  0.        ]
+2017-12-05 18:33:37,086 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:37,088 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:37,089 (opf-thread) DEBUG: Agent 0: Z[3]=[ 1.03415364  0.87630713  0.         -0.17255606  0.28950164  0.        ]
+2017-12-05 18:33:37,091 (Thread-8 ) DEBUG: Agent 0: Z[3]=[ 1.03415364  0.87630713  0.90488857 -0.17255606  0.28950164 -0.08000435]
+2017-12-05 18:33:37,091 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 3. Updating nu.
+2017-12-05 18:33:37,127 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:37,151 (opf-thread) INFO: Agent 0========ADMM iteration 3 solved in 0.024 [s]
+2017-12-05 18:33:37,151 (opf-thread) DEBUG: Agent 0: Beta[4]=[ 1.16791306  0.          0.         -0.49121746  0.          0.        ]-> from Agent 0
+2017-12-05 18:33:37,153 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:37,158 (Thread-7 ) DEBUG: Agent 0: Beta[4]=[ 1.16791306  0.95126802  0.         -0.49121746 -0.07557438  0.        ]-> from Agent 1
+2017-12-05 18:33:37,164 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:37,164 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:37,187 (Thread-8 ) DEBUG: Agent 0: Z[4]=[ 0.          0.89308673  0.          0.          0.17257394  0.        ]
+2017-12-05 18:33:37,220 (Thread-7 ) DEBUG: Agent 0: Beta[4]=[ 1.16791306  0.95126802  0.90884173 -0.49121746 -0.07557438 -0.28143826]-> from Agent 2
+2017-12-05 18:33:37,220 (Thread-7 ) INFO: Agent 0: Received all beta info for iteration 4. Updating z.
+2017-12-05 18:33:37,220 (opf-thread) DEBUG: Agent 0: Z[4]=[ 1.00934094  0.89308673  0.         -0.28274337  0.17257394  0.        ]
+2017-12-05 18:33:37,226 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:37,226 (Thread-8 ) DEBUG: Agent 0: Z[4]=[ 1.00934094  0.89308673  0.91139579 -0.28274337  0.17257394 -0.21945637]
+2017-12-05 18:33:37,226 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 4. Updating nu.
+2017-12-05 18:33:37,247 (opf-thread) INFO: Agent 0========ADMM iteration 4 solved in 0.02 [s]
+2017-12-05 18:33:37,250 (opf-thread) DEBUG: Agent 0: Beta[5]=[ 1.15857216  0.          0.         -0.20847408  0.          0.        ]-> from Agent 0
+2017-12-05 18:33:37,250 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:37,259 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:37,259 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:37,309 (Thread-7 ) DEBUG: Agent 0: Beta[5]=[ 1.15857216  0.          0.90784711 -0.20847408  0.         -0.43828315]-> from Agent 2
+2017-12-05 18:33:37,328 (Thread-8 ) DEBUG: Agent 0: Beta[5]=[ 1.15857216  0.98541999  0.90784711 -0.20847408 -0.14085786 -0.43828315]-> from Agent 1
+2017-12-05 18:33:37,328 (Thread-8 ) INFO: Agent 0: Received all beta info for iteration 5. Updating z.
+2017-12-05 18:33:37,328 (opf-thread) DEBUG: Agent 0: Z[5]=[ 1.01727975  0.          0.         -0.26253836  0.          0.        ]
+2017-12-05 18:33:37,334 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:37,365 (Thread-7 ) DEBUG: Agent 0: Z[5]=[ 1.01727975  0.91081017  0.         -0.26253836  0.04970101  0.        ]
+2017-12-05 18:33:37,368 (Thread-8 ) DEBUG: Agent 0: Z[5]=[ 1.01727975  0.91081017  0.91603976 -0.26253836  0.04970101 -0.25161913]
+2017-12-05 18:33:37,368 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 5. Updating nu.
+2017-12-05 18:33:37,407 (opf-thread) INFO: Agent 0========ADMM iteration 5 solved in 0.036 [s]
+2017-12-05 18:33:37,407 (opf-thread) DEBUG: Agent 0: Beta[6]=[ 1.14129281  0.          0.          0.05406498  0.          0.        ]-> from Agent 0
+2017-12-05 18:33:37,407 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:37,430 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:37,430 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:37,463 (Thread-7 ) DEBUG: Agent 0: Beta[6]=[ 1.14129281  0.          0.95301908  0.05406498  0.         -0.46069461]-> from Agent 2
+2017-12-05 18:33:37,469 (Thread-8 ) DEBUG: Agent 0: Z[6]=[ 0.          0.          0.9251563   0.          0.         -0.19823083]
+2017-12-05 18:33:37,480 (Thread-7 ) DEBUG: Agent 0: Beta[6]=[ 1.14129281  1.00704789  0.95301908  0.05406498 -0.08226512 -0.46069461]-> from Agent 1
+2017-12-05 18:33:37,480 (Thread-7 ) INFO: Agent 0: Received all beta info for iteration 6. Updating z.
+2017-12-05 18:33:37,483 (opf-thread) DEBUG: Agent 0: Z[6]=[ 1.0337866   0.          0.9251563  -0.16296492  0.         -0.19823083]
+2017-12-05 18:33:37,487 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:37,490 (Thread-8 ) DEBUG: Agent 0: Z[6]=[ 1.0337866   0.91615206  0.9251563  -0.16296492 -0.06933048 -0.19823083]
+2017-12-05 18:33:37,490 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 6. Updating nu.
+2017-12-05 18:33:37,530 (opf-thread) INFO: Agent 0========ADMM iteration 6 solved in 0.039 [s]
+2017-12-05 18:33:37,532 (opf-thread) DEBUG: Agent 0: Beta[7]=[ 1.10750623  0.          0.          0.21703215  0.          0.        ]-> from Agent 0
+2017-12-05 18:33:37,532 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:37,542 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:37,542 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:37,648 (Thread-7 ) DEBUG: Agent 0: Beta[7]=[ 1.10750623  1.01718891  0.          0.21703215  0.02782369  0.        ]-> from Agent 1
+2017-12-05 18:33:37,650 (Thread-8 ) DEBUG: Agent 0: Beta[7]=[ 1.10750623  1.01718891  0.99346727  0.21703215  0.02782369 -0.35517681]-> from Agent 2
+2017-12-05 18:33:37,650 (Thread-8 ) INFO: Agent 0: Received all beta info for iteration 7. Updating z.
+2017-12-05 18:33:37,651 (opf-thread) DEBUG: Agent 0: Z[7]=[ 1.03938747  0.          0.         -0.03677365  0.          0.        ]
+2017-12-05 18:33:37,655 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:37,657 (Thread-7 ) DEBUG: Agent 0: Z[7]=[ 1.03938747  0.91752243  0.         -0.03677365 -0.1723828   0.        ]
+2017-12-05 18:33:37,660 (Thread-8 ) DEBUG: Agent 0: Z[7]=[ 1.03938747  0.91752243  0.93287116 -0.03677365 -0.1723828  -0.0964062 ]
+2017-12-05 18:33:37,660 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 7. Updating nu.
+2017-12-05 18:33:37,750 (opf-thread) INFO: Agent 0========ADMM iteration 7 solved in 0.087 [s]
+2017-12-05 18:33:37,750 (opf-thread) DEBUG: Agent 0: Beta[8]=[ 1.06811931  0.          0.          0.25380585  0.          0.        ]-> from Agent 0
+2017-12-05 18:33:37,752 (opf-thread) INFO:  finish set local beta
+2017-12-05 18:33:37,760 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-05 18:33:37,762 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-05 18:33:37,825 (Thread-7 ) DEBUG: Agent 0: Beta[8]=[ 1.06811931  1.01935661  0.          0.25380585  0.13187879  0.        ]-> from Agent 1
+2017-12-05 18:33:37,826 (Thread-8 ) DEBUG: Agent 0: Beta[8]=[ 1.06811931  1.01935661  0.9934997   0.25380585  0.13187879 -0.18102445]-> from Agent 2
+2017-12-05 18:33:37,826 (Thread-8 ) INFO: Agent 0: Received all beta info for iteration 8. Updating z.
+2017-12-05 18:33:37,828 (opf-thread) DEBUG: Agent 0: Z[8]=[ 1.02699187  0.          0.          0.06822007  0.          0.        ]
+2017-12-05 18:33:37,831 (Thread-7 ) DEBUG: Agent 0: Z[8]=[ 1.02699187  0.91909391  0.          0.06822007 -0.25335991  0.        ]
+2017-12-05 18:33:37,835 (Thread-8 ) DEBUG: Agent 0: Z[8]=[ 1.02699187  0.91909391  0.94256967  0.06822007 -0.25335991  0.00941646]
+2017-12-05 18:33:37,835 (Thread-8 ) INFO: Agent 0: Received all z info for iteration 8. Updating nu.
+2017-12-05 18:33:37,835 (opf-thread) INFO:  Waiting to receive all z's
+2017-12-05 18:33:37,950 (Thread-7 ) DEBUG: Agent 0: Beta[9]=[ 0.          1.00827765  0.          0.          0.18894836  0.        ]-> from Agent 1
+2017-12-05 18:33:38,003 (Thread-8 ) DEBUG: Agent 0: Beta[9]=[ 0.          1.00827765  0.98990095  0.          0.18894836 -0.00358245]-> from Agent 2

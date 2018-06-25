@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+service Admin{
+  //method that the agent calls when it gets online
+  rpc agent_online(AgentRequest) returns (CommReply) {}
+
+  //method that the agent calls when it gets offline
+  rpc agent_offline(AgentRequest) returns (CommReply) {}
+
+  //method that the agent calls when it starts the admm algorithm
+  rpc agent_started_admm(AgentRequest) returns (CommReply) {}
+
+  //method that the agent calls when it finishes the admm algorithm
+  rpc agent_finished_admm(ADMMResults) returns (CommReply) {}
+
+  //method that the agent calls periodically to send its state to the administrator
+  rpc agent_measurements(Measurements) returns (CommReply) {}
+
+  rpc agent_general_use_message(GenericMessage) returns (CommReply) {}
+}
+
+enum OperationStatus {
+    SUCCESS = 0;
+    FAILED = 1;
+  }
+message CommReply {
+  OperationStatus status = 1;
+  string message = 2;
+}
+
+//empty message to be used for methods with no parameters
+message EmptyRequest {}
+//============ ADMM related messages
+message AgentRequest {
+  uint32 agent_id = 1;  //the id of the agent
+}
+
+message ADMMResults {
+  uint32 agent_id = 1;  //the id of the agent
+  float  avg_opt_time = 2;  //average time spent in the optimization routine
+  float avg_rpc_time = 3;  //average time spent on one RPC call
+  float p_ref = 4;  //the active power reference sent to the opal
+  float q_ref = 5;  //the reactive power reference sent to the opal
+}
+
+message Measurements {
+  uint32 agent_id = 1;  //the id of the agent
+  float  avg_opal_time = 2;  //average time spent in the communication with opal
+  float p_meas = 3;  //the voltage measurement
+  float q_meas = 4;  //the power measurement
+  float v_meas = 5;
+  float trip = 6;  //trip signal of the converter
+}
+
+message GenericMessage{
+    uint32 agent_id = 1;  //the id of the agent
+    string text = 2;  //generic text message
+}

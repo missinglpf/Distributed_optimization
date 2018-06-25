@@ -1,0 +1,18 @@
+2017-12-09 01:11:57,753 (MainThread) INFO: Reading the configuration file
+2017-12-09 01:11:57,756 (MainThread) INFO: Setting the initial values in OPAL-RT
+2017-12-09 01:11:57,756 (MainThread) INFO: Configuring the communication links
+2017-12-09 01:11:57,756 (MainThread) INFO: Initializing the ADMM buffers
+2017-12-09 01:11:57,756 (MainThread) INFO: Agent 0 initialized the ADMM buffers. First run. Populating first iteration with a cold start.
+2017-12-09 01:11:57,756 (MainThread) INFO: Opening communication channels to neighbours
+2017-12-09 01:11:57,792 (MainThread) INFO: Starting the data loging thread
+2017-12-09 01:11:57,795 (MainThread) INFO: Starting the opf thread
+2017-12-09 01:11:57,798 (opf-thread) DEBUG: Waiting for admm_start event
+2017-12-09 01:11:57,798 (opf-thread) INFO: Agent 0========Solving ADMM iteration 0
+2017-12-09 01:11:57,799 (MainThread) INFO: Starting the agent's RPC server
+2017-12-09 01:11:58,065 (opf-thread) INFO: Agent 0========ADMM iteration 0 solved in 0.266 [s]
+2017-12-09 01:11:58,065 (opf-thread) DEBUG: Agent 0: Beta[1]=[  1.00000180e+00   0.00000000e+00   0.00000000e+00   1.73008168e-07
+   0.00000000e+00   0.00000000e+00]-> from Agent 0
+2017-12-09 01:11:58,065 (opf-thread) INFO:  finish set local beta
+2017-12-09 01:11:58,315 (opf-thread) INFO: Agent 0: I finished distributing all betas
+2017-12-09 01:11:58,315 (opf-thread) INFO:  Waiting to receive all betas
+2017-12-09 01:11:58,615 (MainThread) INFO: Agent 0 starting at:localhost:8000

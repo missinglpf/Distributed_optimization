@@ -1,0 +1,105 @@
+syntax = "proto3";
+
+service ADMMAgent{
+  //start the admm algorithm on the agent
+  rpc start_admm(EmptyRequest) returns (CommReply) {}
+
+  //sets a beta value in the ADMM algorithm
+  rpc set_beta_element(SetBetaRequest) returns (CommReply) {}
+
+  //sets a z value in the ADMM algorithm
+  rpc set_z_element(SetZRequest) returns (CommReply) {}
+
+  //sets a x0 value in the ADMM algorithm
+  rpc set_x0_element(SetX0Request) returns (CommReply) {}
+
+  //sets the step size rho for the ADMM algorithm
+  rpc set_admm_rho(SetRhoRequest) returns (CommReply) {}
+
+  //sets the number of iterations the ADMM algorithm
+  rpc set_admm_max_iter(SetMaxIterRequest) returns (CommReply) {}
+
+  //shuts down the agent
+  rpc remote_shutdown(EmptyRequest) returns (CommReply) {}
+
+  //enable the agent
+  rpc enable(EmptyRequest) returns (CommReply) {}
+
+  //when a new agent is started after the system, use this function to merge the agent to the rest of the network
+  rpc merge(MergeRequest) returns (CommReply) {}
+
+  //when a new agent is started after the system, use this function to register the new agent with its neighbours
+  rpc add_me_to_your_neighbours(AddToNeighboursRequest) returns (CommReply) {}
+
+  //adds virtual delay and loss to the communication link towards a neighbour
+  rpc set_comm_link_to_neigh(SetCommLinkRequest) returns (CommReply) {}
+
+  //sets the measurement server to be used by the agent
+  rpc set_measurement_webserver(SetMeasServerRequest) returns (CommReply) {}
+}
+
+enum OperationStatus {
+    SUCCESS = 0;
+    FAILED = 1;
+  }
+message CommReply {
+  OperationStatus status = 1;
+  string message = 2;
+}
+
+//empty message to be used for methods with no parameters
+message EmptyRequest {}
+//============ ADMM related messages
+message SetBetaRequest {
+  float value_real = 1;  //the value of the beta corresponding to real voltage to be set
+  float value_imag = 2; //the value of the beta corresponding to image voltage to be set
+  uint32 agent_id = 3;  //the id of the agent sending the beta value
+  uint32 admm_it = 4;  //the admm iteration for which this beta value is being set
+}
+
+message SetZRequest {
+  float value_real = 1;  //the value of the z corresponding to real voltage to be set
+  float value_imag = 2;  //the value of the z corresponding to real voltage to be set
+  uint32 agent_id = 3;  //the id of the agent sending the z value
+  uint32 admm_it = 4;  //the admm iteration for which this z value is being set
+}
+
+message SetX0Request {
+  float value_real = 1;  //the value of the x0 corresponding to real voltage to be set
+  float value_imag = 2;  //the value of the x0 corresponding to real voltage to be set
+  uint32 agent_id = 3;  //the id of the agent sending the x0 value
+}
+
+message SetRhoRequest {
+  float value = 1;  //the value of the rho to be used in the ADMM algorithm
+}
+
+message SetMaxIterRequest {
+  uint32 value = 1;  //the number of iterations for the ADMM algorithm
+}
+
+//============ Plug&Play related messages
+message AddToNeighboursRequest{
+  uint32 agent_id = 1;  //the id of the new agent to be added to the neighbour list
+  string agent_ip = 2;  //the ip of the new agent's server
+  uint32 agent_port = 3;  //the port of the new agent's server
+  float g = 4;  //the conductance of the line between the two agents
+}
+
+message MergeRequest{
+  uint32 connect_switch = 1; //the switch to close after connection
+}
+//==================================
+
+//============ System configuration related messages
+message SetCommLinkRequest {
+  uint32 neigh_id = 1;  //the id of the neighbour at the end of the communication link
+  float delay = 2;  //virtual delay in seconds to be added to the communication link
+  float loss = 3;  //virtual paket loss in % to be added to the communication link
+}
+
+message SetMeasServerRequest {
+  string server_ip = 1;  //the ip of the machine that hosts the measurement server. Typically the OPAL-RT
+  uint32 server_port = 2;  //the port
+}
+//==================================
